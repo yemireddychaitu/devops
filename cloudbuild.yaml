@@ -1,0 +1,16 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/cts05-rrpatil/runimage', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/cts05-rrpatil/runimage']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'myfirstrun', '--image', 'gcr.io/cts05-rrpatil/runimage', '--region', 'us-central1', '--allow-unauthenticated']
+images:
+- gcr.io/cts05-rrpatil/runimage
+
+
+
