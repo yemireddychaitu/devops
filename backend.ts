@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = ""
+    bucket = "bucket-from-github"
     prefix = "tf/state"
   }
 }
