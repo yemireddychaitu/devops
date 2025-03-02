@@ -27,7 +27,7 @@ jobs:
     - id: auth
       uses: google-github-actions/auth@v2.0.0  
       with:
-        workload_identity_provider: 'projects/657207815175/locations/global/workloadIdentityPools/github-demo-pool/providers/github'
+        workload_identity_provider: 'projects/751345403071/locations/global/workloadIdentityPools/githubactions/providers/github'
         service_account: 'github-actions@cts13-yemireddyc.iam.gserviceaccount.com'
 
 
