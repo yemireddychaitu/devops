@@ -49,8 +49,7 @@ jobs:
 
     
 
-    - name: Terraform Destroy
-      run: terraform destroy -auto-approve -input=false
+    
 
 
 
