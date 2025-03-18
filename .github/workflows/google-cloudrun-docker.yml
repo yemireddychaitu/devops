@@ -39,7 +39,7 @@ env:
   PROJECT_ID: 'cts13-yemireddyc' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
   SERVICE: 'cloud-build-sa@cts13-yemireddyc.iam.gserviceaccount.com' # TODO: update to your service name
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/657207815175/locations/global/workloadIdentityPools/github-demo-pool/providers/github' # TODO: update to your workload identity provider
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/751345403071/locations/global/workloadIdentityPools/githubactions/providers/github' # TODO: update to your workload identity provider
 
 jobs:
   deploy:
