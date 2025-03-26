@@ -40,6 +40,7 @@ env:
   SERVICE: 'github-actions@cts13-yemireddyc.iam.gserviceaccount.com' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/751345403071/locations/global/workloadIdentityPools/githubactions/providers/github' # TODO: update to your workload identity provider
   REPO: 'sample3'
+  CRNAME: 'githubcr'
   
 jobs:
   deploy:
@@ -90,7 +91,7 @@ jobs:
 
       uses: 'google-github-actions/deploy-cloudrun@33553064113a37d688aa6937bacbdc481580be17' # google-github-actions/deploy-cloudrun@v2
       with:
-          service: '${{ env.SERVICE }}'
+          service: '${{ env.CRNAME }}'
           region: '${{ env.REGION }}'
           # NOTE: If using a pre-built image, update the image name below:
 
